@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Images</title>
+<link href="css/grid.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+<header class="grid-con center-grid-con">
+    <h1 class="col-span-full">Responsive Images</h1>
+</header>
+
+<main class="grid-con center-grid-con">
+<section class="col-span-full example-section">
+
+<h2>Img and srcset</h2>
+<img
+    src="images/desktop-pizza.jpg"
+
+    srcset=
+    "images/mobile-pizza.jpg 480w,
+    images/tablet-pizza.jpg 768w,
+    images/desktop-pizza.jpg 1200w"
+
+    sizes=
+    "(max-width: 767px) 100vw,
+    (max-width: 1199px) 100vw,
+    1200px"
+
+    alt="Pizza image responsive">
+</section>
+
+<section class="col-span-full example-section">
+<h2>Image Using Picture Element</h2>
+<picture>
+    <source media="(max-width: 767px)" srcset="images/mobile-burger.jpg">
+    <source media="(max-width: 1199px)" srcset="images/tablet-burger.jpg">
+    <img src="images/desktop-burger.jpg" alt="Burger image responsive">
+</picture>
+</section>
+
+<section class="col-span-full example-section">
+    <h2>CSS Background Image</h2>
+    <div class="responsive-bg"></div>
+</section>
+<script src="js/main.js"></script>
+</main>
+
+</body>
+</html>
